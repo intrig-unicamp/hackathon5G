@@ -3,7 +3,7 @@
 
 Para a Hackathon, foi feita a coleta de dados de utilização da rede 5G no Brasil. A metodologia de coleta de dados foi com base em testes de campo. Os experimentos foram conduzidos em um _Samsung S21 5G_.
 
-Abaixo enumeramos os dois conjuntos de dados produzidos e um auxiliar. Cada conjunto de dados possui um Jupyter Notebook demonstrando uma exploração de dados inicial para os usuários conhecerem a estrutura dos dados.
+Abaixo enumeramos os dois conjuntos de dados produzidos e um auxiliar. Cada conjunto de dados possui um Jupyter Notebook demonstrando uma exploração de dados inicial para os participantes conhecerem a estrutura dos dados.
 
 # 🎬 Monitoramento do tráfego
 O YouTube tem integrado nos seus diversos clientes (Web, Web Mobile, IFrame, e aplicativos iOS e Android) um instrumento de coleta de métricas de experiência do usuário. Analisamos o código do YouTube Web e identificamos as métricas monitoradas, as quais são iguais nos demais clientes. Os [dados iniciais](./youtube-qoe-har) desse experimento foram coletados pelo Chrome DevTools no formato HAR.
