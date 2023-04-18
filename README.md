@@ -16,5 +16,7 @@ Além disso, é desejável que os participantes tenha conhecimentos nos seguinte
 - Programação em _Python_
 - _Jupyter Notebook_/_Google Colab_
 
-# Datasets
+# 1º passo: Datasets
+Consulte [aqui](datasets) a pasta com os conjuntos de dados disponibilizados. Os dados estão documentados no [README](datasets/README.md) dessa pasta.
 
+# 2º passo: Desafios
