@@ -20,3 +20,4 @@ Além disso, é desejável que os participantes tenha conhecimentos nos seguinte
 Consulte [aqui](datasets) a pasta com os conjuntos de dados disponibilizados. Os dados estão documentados no [README](datasets/README.md) dessa pasta.
 
 # 2º passo: Desafios
+Consulte [aqui](challenges) a pasta com os desafios propostos. O [README](challenges/README.md) dessa pasta fornece instruções adicionais.
