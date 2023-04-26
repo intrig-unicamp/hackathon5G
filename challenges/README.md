@@ -12,13 +12,16 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
 - 📊 Visualização usando o paths-viewer
 
 - 🔮 Predição de qualidade de sinal mono-variada
+
     Conjuntos de dados recomendados: `g-nettrack-pro`
 
 - 🔮 Predição de qualidade de sinal multi-variada
+
     Conjuntos de dados recomendados: `g-nettrack-pro`
     (CQI, SNNR, xxx)
 
 - 🔮 Predição do tipo de mobilidade
+
     Conjuntos de dados recomendados: `g-nettrack-pro`
 
 - 🤝 Correlação de atributos
