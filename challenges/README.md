@@ -35,6 +35,10 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
 - 🔮🗂️ Predição da qualidade do stream de vídeo dada a qualidade do sinal
     Conjuntos de dados recomendados: `youtube-qoe-pcap` + `g-nettrack-pro`
 
+- 🤝 Análise da tendências de construção e de características dos ERBs no Brasil. 
+    Conjuntos de dados recomendados: `mosaico`
+
+
 # 🤔 Critérios de avaliação
 
 - Pré-processamento dos dados
