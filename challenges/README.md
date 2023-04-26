@@ -24,18 +24,23 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
 - 🤝 Correlação de atributos
 
 - 🔮🗂️ Inferir a qual ERB (estação rádio base) o celular está conectado
+
     Conjuntos de dados recomendados: `g-nettrack-pro` + `mosaico`
 
 - 🔮🗂️ Predição da qualidade do sinal dadas as coordenadas do celular
+
     Conjuntos de dados recomendados: `g-nettrack-pro` + `mosaico`
 
 - 🔮🗂️ Predição da qualidade do stream de vídeo de acordo com as coordenadas do celular
+
     Conjuntos de dados recomendados: `youtube-qoe-pcap` + `g-nettrack-pro` + `mosaico`
 
 - 🔮🗂️ Predição da qualidade do stream de vídeo dada a qualidade do sinal
+
     Conjuntos de dados recomendados: `youtube-qoe-pcap` + `g-nettrack-pro`
 
 - 🤝 Análise da tendências de construção e de características dos ERBs no Brasil. 
+
     Conjuntos de dados recomendados: `mosaico`
 
 
