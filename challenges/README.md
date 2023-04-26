@@ -1,4 +1,4 @@
-# Desafios
+# 🏋️‍♂️ Desafios
 > Nessa pasta contém os desafios propostos para a _Hackathon SMARTNESS / 5G Dataset Challenge_
 
 Como parte da Hackathon, os participantes deverão resolver o maior número possível dos desafios fornecidos a seguir.
@@ -35,7 +35,8 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
 - 🔮🗂️ Predição da qualidade do stream de vídeo dada a qualidade do sinal
     Conjuntos de dados recomendados: `youtube-qoe-pcap` + `g-nettrack-pro`
 
-# Critérios de avaliação
+# 🤔 Critérios de avaliação
+
 - Pré-processamento dos dados
 - Representação dos dados e estratégia de composição de atributos
 - Estratégia de seleção do modelo escolhido
@@ -43,3 +44,4 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
 - Qualidade do modelo em relação as métricas de qualidade (acurácia, precisão, revocação, F1-score, etc)
 - Interpretabilidade do modelo sugerido
 - Storytelling dos dados, incluindo conclusões
+- Potencial impacto e viabilidade da solução apresentada.
