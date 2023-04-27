@@ -13,66 +13,55 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
 
 - 🔮 Predição de qualidade de sinal
 
-    **Conjunto de dados**
+      **Conjunto de dados**: `g-nettrack-pro` (CQI, SNNR, xxx)
     
-    **O desafio**
+      **O desafio**
     
-    **A entrega**
-    Conjuntos de dados recomendados: `g-nettrack-pro`
-    (CQI, SNNR, xxx)
+      **A entrega**    
 
 - 🔮 Predição do tipo de mobilidade
 
-    **Conjunto de dados**
-    `g-nettrack-pro`
+      **Conjunto de dados**: `g-nettrack-pro`
     
-    **O desafio**
+      **O desafio**
     
-    **A entrega**
+      **A entrega**
     
 - 🤝 Correlação de atributos
 
-    **Conjunto de dados**
+      **Conjunto de dados**
     
-    **O desafio**
+      **O desafio**
     
-    **A entrega**
+      **A entrega**
    
 - 🔮🗂️ Inferir a qual ERB (estação rádio base) o celular está conectado
 
-    **Conjunto de dados**
+      **Conjunto de dados**: `g-nettrack-pro` + `mosaico`
     
-     `g-nettrack-pro` + `mosaico`
+      **O desafio**
     
-    **O desafio**
-    
-    **A entrega**
+      **A entrega**
 
 - 🔮🗂️ Predição da qualidade do sinal dadas as coordenadas do celular
 
-    **Conjunto de dados**
+      **Conjunto de dados**:  `g-nettrack-pro` + `mosaico`
+     
+      **O desafio**
     
-    `g-nettrack-pro` + `mosaico`
-    
-    **O desafio**
-    
-    **A entrega**
+      **A entrega**
    
 - 🔮🗂️ Predição da qualidade do stream de vídeo de acordo com as coordenadas do celular
 
-    **Conjunto de dados**
+      **Conjunto de dados**: `youtube-qoe-pcap` + `g-nettrack-pro` + `mosaico`
     
-    `youtube-qoe-pcap` + `g-nettrack-pro` + `mosaico`
+      **O desafio**
     
-    **O desafio**
-    
-    **A entrega**
+      **A entrega**
     
 - 🔮🗂️ Predição da qualidade do stream de vídeo dada a qualidade do sinal
 
-    **Conjunto de dados**
-    
-    `youtube-qoe-pcap` + `g-nettrack-pro`
+    **Conjunto de dados**: `youtube-qoe-pcap` + `g-nettrack-pro`
     
     **O desafio**
     
@@ -80,9 +69,7 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
 
 - 🤝 Análise da tendências de construção e de características dos ERBs no Brasil. 
 
-    **Conjunto de dados**
-    
-    `mosaico`
+    **Conjunto de dados**: `mosaico`
    
     **O desafio**
 
