@@ -21,3 +21,6 @@ Consulte [aqui](datasets) a pasta com os conjuntos de dados disponibilizados. Os
 
 # 2º passo: Desafios
 Consulte [aqui](challenges) a pasta com os desafios propostos. O [README](challenges/README.md) dessa pasta fornece instruções adicionais.
+
+# 2º passo: Entrega
+Para entrega do jupyter notebook criado compartilhe o link e preencha o [forms](forms) em ...
