@@ -3,72 +3,48 @@
 
 Como parte da Hackathon, os participantes deverão resolver o maior número possível dos desafios fornecidos a seguir.
 
-- 📊 Visualização usando o PathsViewer
-**A ferramenta**: PathsViewer é uma interface para visualização de dados espaço-temporais em tempo real ou pós-eventos. Essa ferramenta busca suprir a demanda por ferramentas de visualização de trajetórias de objetos, em vista do grande interesse em pesquisas nesse tipo de dado.
+- 📊 **Visualização usando o PathsViewer**
 
-É possível utilizar conjuntos de dados variados, com estruturas diversas, tais como traces de 5G georeferenciados e trajetórias de veículos.
+  **A ferramenta**: PathsViewer é uma interface para visualização de dados espaço-temporais em tempo real ou pós-eventos. Essa ferramenta busca suprir a demanda por ferramentas de visualização de trajetórias de objetos, em vista do grande interesse em pesquisas nesse tipo de dado.
 
-**O desafio**: Esse desafio tem como objetivo usar a ferramenta PathViewer para apresentar os conjuntos de dados fornecidos (não é necessário utilizar todos eles).
+  É possível utilizar conjuntos de dados variados, com estruturas diversas, tais como traces de 5G georeferenciados e trajetórias de veículos.
 
-A equipe deve explorar as funcionalidades do PathViewer, como ajuste de escala, visualização em mapa 2D ou satélite, envio de múltiplos conjuntos de dados, entre outras. Com isso, é possível gerar visualizações claras e informativas que ajudem os usuários a visualizar as informações contidas nos dados de trajetórias de objetos.
+  **O desafio**: Esse desafio tem como objetivo usar a ferramenta PathViewer para apresentar os conjuntos de dados fornecidos (não é necessário utilizar todos eles).
 
-**A entrega**: De modo que esse desafio em específico não envolve a aplicação de técnicas de aprendizado de máquina (tal como os demais a seguir), não é solicitado a entrega de um Jupyter Notebook/Colab. Em vez disso, espera-se que a solução desse desafio seja composta de uma descrição do que foi realizado pela equipe, os insights obtidos, eventuais códigos produzidos para o tratamento de dados, acompanhado de um vídeo ou capturas de tela que mostrem a interface do PathsViewer com os conjuntos de dados fornecidos. É importante que a entrega mostre as funcionalidades utilizadas da ferramenta.
+  A equipe deve explorar as funcionalidades do PathViewer, como ajuste de escala, visualização em mapa 2D ou satélite, envio de múltiplos conjuntos de dados, entre outras. Com isso, é possível gerar visualizações claras e informativas que ajudem os usuários a visualizar as informações contidas nos dados de trajetórias de objetos.
 
-- 🤝 Análise da tendências de construção e de características dos ERBs no Brasil. 
-*Conjunto de dados: `mosaico`
+  **A entrega**: De modo que esse desafio em específico não envolve a aplicação de técnicas de aprendizado de máquina (tal como os demais a seguir), não é solicitado a entrega de um Jupyter Notebook/Colab. Em vez disso, espera-se que a solução desse desafio seja composta de uma descrição do que foi realizado pela equipe, os insights obtidos, eventuais códigos produzidos para o tratamento de dados, acompanhado de um vídeo ou capturas de tela que mostrem a interface do PathsViewer com os conjuntos de dados fornecidos. É importante que a entrega mostre as funcionalidades utilizadas da ferramenta.
 
-*O desafio: Avaliar as features do dataset do mosaico e avaliar características relevantes dos ERBs no Brasil. Algumas possíveis analíses incluem, avaliar qual tem sido o plano de construção de antenas de uma dada operadora como a Claro. Quais as principais diferenças entre as antenas em operação dessas operadoras, ou quem sabe entre as regiões. Qual empresa tem prevalecido na construção de antenas 5G. 
+---
+- 📊 **Análise da tendências de construção e de características das ERBs no Brasil**
 
-*A entrega: As análises são em grande parte de carater exploratório, por isso a elaboração de gráficos e de mapas que apoiem uma tomada de decisão acerca do tema abordado é o principal objetivo.
+  O desafio envolve avaliar os atributos do conjunto de dados `mosaico` e avaliar características relevantes das ERBs no Brasil. Algumas possíveis analises incluem avaliar entre operadoras, ou até mesmo entre as regiões, qual tem sido o plano de construção de antenas, quais as principais diferenças entre as antenas em operação de diferentes operadoras/regiões, qual empresa tem prevalecido na construção de antenas 5G, entre outros.
 
-- 🔮 Predição de qualidade de sinal
-*Conjunto de dados: `g-nettrack-pro`
+  As análises são em grande parte de carater exploratório, por isso a elaboração de gráficos e de mapas que apoiem uma tomada de decisão acerca do tema abordado é o principal objetivo.
 
-*O desafio: Avaliar métricas de qualidade de streaming de vídeo como CQI, SNNR, entre outros.
+---
+- 🔮 **Predição de qualidade de sinal**
 
-*A entrega: Avaliar o erro entre o valor real e o valor previsto pelos métodos propostos.
+  Com o objetivo de prever a qualidade de sinal, para resolver esse desafio a equipe deve empregar técnicas de aprendizado de máquina nos conjuntos de dados fornecidos pela comissão organizadora da Hackathon SMARTNESS, compostos por dados de uso de serviços de streaming de vídeo adaptativo (YouTube) e redes 5G no Brasil, entre outras bases que a equipe julgue pertinente. Uma estratégia pode ser a combinação de diferentes bases de dados para enriquecimento de dados, como, por exemplo, usar o conjunto de dados `g-nettrack-pro` enriquecido com o `mosaico` para prover informações das antenas na proximidade, como a localização, densidade de antenas, frequência e tecnologia.
 
-- 🔮 Predição do tipo de mobilidade
-*Conjunto de dados: `g-nettrack-pro`
+  As equipes deverão utilizar técnicas de aprendizado de máquina, como predição mono-variada e multi-variada, para prever os valores de um ou mais indicadores de qualidade de sinal, tal como QUAL, CQI e SNNR.
 
-*O desafio: Predizer o tipo de mobilidade do usuário Ex: parado, caminhando, correndo, em veículo... Isso pode ser feito avaliando as coordenadas do usuário no dataset de transmissão do video e avaliar como isso impacta na qualidade de transmissão de vídeo.
+---
+- 🔮 **Predição do tipo de mobilidade**
 
-*A entrega: Espera-se o uso de mapas que ilustrem o deslocamento do usuário, e que a qualidade de vídeo seja avaliada e comparada para os diferentes cenários de deslocamento.
+  Esse desafio consiste em utilizar técnicas de aprendizado de máquina para prever o tipo de mobilidade (pedestre, veículo, metrô/trem) de um dispositivo móvel com base nos dados de localização fornecidos pelo conjunto de dados `g-nettrack-pro`. Essa tarefa pode ser abordada como um problema de classificação, onde o modelo de aprendizado de máquina deve classificar cada registro do conjunto de dados em uma das classes de mobilidade possíveis.
 
-- 🤝 Correlação de atributos
-*Conjunto de dados: Qualquer
+---
+- 🔮🗂️ **Predição da qualidade de transmissão de vídeo**
 
-*O desafio: Avaliar variáveis correlacionadas que possam ser úteis para a solução de algum problema. A decisão de quais atributos e de qual o problema a ser abordado é de livre escolha.
+  O desafio de predição da qualidade de transmissão de vídeo adaptativo (YouTube) consiste em utilizar técnicas de aprendizado de máquina para prever a qualidade da transmissão de vídeo em dispositivos móveis. O objetivo é criar um modelo de predição que leve em conta informações como as coordenadas do celular, as características da rede, a tecnologia utilizada, entre outras variáveis, para estimar a qualidade de transmissão de vídeo. Com isso, é possível melhorar a experiência do usuário, garantindo que a transmissão de vídeo seja realizada com a melhor qualidade possível, considerando as condições da rede e do ambiente em que o usuário está localizado.
 
-*A entrega: Por ser um problema com escopo amplo, espera-se que a solução tenha algum impacto relevante, e que tal impacto seja avaliado e mensurado. O storytelling nesse caso é fundamental. 
+  As equipes deverão utilizar técnicas de aprendizado de máquina para prever a qualidade de transmissão de vídeo usando, separadamente, os dados de localização correlacionado com as antenas na proximidade e métricas da rede (como qualidade do sinal, tecnologia, frequência).
 
-- 🔮🗂️ Predição da qualidade do sinal dadas as coordenadas do celular
-*Conjunto de dados: `g-nettrack-pro` + `mosaico`
+---
+- 🔮🗂️ **Inferir a qual Estação Rádio Base o celular está conectado**
 
-*O desafio:  Avaliar o valor de Quality of Experience (QoE) dado os datasets com informações sobre a qualidade de transmissão do video e da lista de ERBs. Espera-se que para essa tarefa sejam usados diferentes modelos de regressão.
-
-*A entrega:  O objetivo é reduzir ao máximo as métricas de avaliação do modelo utilizado, explicar todas as decisões tomadas ao longo da elaboração do modelo e do processamento de dados.
-
-- 🔮🗂️ Predição da qualidade do stream de vídeo de acordo com as coordenadas do celular
-*Conjunto de dados: `youtube-qoe-pcap` + `g-nettrack-pro` + `mosaico`
-
-*O desafio:  Avaliar o valor de Quality of Experience (QoE) dado os datasets com informações sobre o trafego de rede, qualidade de transmissão do video e da lista de ERBs. Espera-se que para essa tarefa sejam usados diferentes modelos de regressão.
-
-*A entrega:  O objetivo é reduzir ao máximo as métricas de avaliação do modelo utilizado, explicar todas as decisões tomadas ao longo da elaboração do modelo e do processamento de dados.
-
-- 🔮🗂️ Predição da qualidade do stream de vídeo dada a qualidade do sinal
-*Conjunto de dados: `youtube-qoe-pcap` + `g-nettrack-pro`
-
-*O desafio: Avaliar o valor de Quality of Experience (QoE) dado os datasets com informações sobre o trafego de rede e da qualidade de transmissão do video. Espera-se que para essa tarefa sejam usados diferentes modelos de regressão.
-
-*A entrega: O objetivo é reduzir ao máximo as métricas de avaliação do modelo utilizado, explicar todas as decisões tomadas ao longo da elaboração do modelo e do processamento de dados.
-
-- 🔮🗂️ Inferir a qual ERB (estação rádio base) o celular está conectado
-*Conjunto de dados: `g-nettrack-pro` + `mosaico`
-
-*O desafio: A partir do dataset de transmissão de video com a posição do usuario, inferir qual a ERB mais próxima do usuário. Assim pode-se avaliar melhor em que ponto o usuário pode ter mudado entre ERBs e como isso impactou a qualidade do vídeo.
-
-*A entrega: Espera-se a manipulação dos dois datasets para relacionar a posição do usuário com a posição da antena mais próxima. Pode-se também fazer visualições com a posição das antenas e do usuário. Ou mesmo uma função que automaticamente adicione uma coluna de antena selecionada no dataset do g-nettrack-pro.
+  O desafio proposto é inferir a qual Estação Rádio Base (ERB) o dispositivo móvel está conectado, com base nas coordenadas do celular correlacionado com as antenas na proximidade. Isso envolve o uso de técnicas de processamento de dados e aprendizado de máquina para analisar os dados de localização e dados das antenas próximas e identificar a ERB mais provável. As equipes podem utilizar diferentes técnicas, como regressão logística, classificação por árvores de decisão, redes neurais e outras técnicas de aprendizado de máquina para resolver esse desafio. A precisão da inferência pode ser medida utilizando métricas como a acurácia e a taxa de falsos positivos.
 
 # 🤔 Critérios de avaliação
 - Pré-processamento dos dados

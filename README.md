@@ -23,7 +23,7 @@ Consulte [aqui](datasets) a pasta com os conjuntos de dados disponibilizados. Os
 Consulte [aqui](challenges) a pasta com os desafios propostos. O [README](challenges/README.md) dessa pasta fornece instruções adicionais.
 
 # 3º passo: Entrega
-> **[Google Forms](https://example.com/link-do-forms) para submissão das soluções**
+> **[Google Forms](https://forms.gle/mZd3qTaYuCifXgLW7) para submissão das soluções**
 
 A equipe deve submeter o Jupyter Notebook/Colab produzido em cada solução, que deve conter um storytelling dos dados cobrindo a descrição do que foi realizado pela equipe, os insights obtidos, o pré-processamento, os modelos de aprendizado de máquina desenvolvidos, a avaliação de desempenho dos modelos, a escolha do modelo de aprendizado de máquina, entre outros tópicos que a equipe julgue pertinente.
 
