@@ -1,5 +1,5 @@
 # 🏋️‍♂️ Desafios
-> Nessa pasta contém os desafios propostos para a _Hackathon SMARTNESS / 5G Dataset Challenge_
+> Essa pasta contém os desafios propostos para a _Hackathon SMARTNESS / 5G Dataset Challenge_
 
 Como parte da Hackathon, os participantes deverão resolver o maior número possível dos desafios fornecidos a seguir.
 
@@ -43,7 +43,7 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
    
 - 🔮🗂️ Inferir a qual ERB (estação rádio base) o celular está conectado
 
-      *Conjunto de dados*: `g-nettrack-pro` + `mosaico`
+      *Conjunto de dados: `g-nettrack-pro` + `mosaico`
     
       *O desafio: A partir do dataset de transmissão de video com a posição do usuario, inferir qual a ERB mais próxima do usuário. Assim pode-se avaliar melhor em que ponto o usuário pode ter mudado entre ERBs e como isso impactou a qualidade do vídeo.
     
