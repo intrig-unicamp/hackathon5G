@@ -1,7 +1,9 @@
 # 🏋️‍♂️ Desafios
 > Nessa pasta contém os desafios propostos para a _Hackathon SMARTNESS / 5G Dataset Challenge_
 
-Como parte da Hackathon, os participantes deverão resolver o maior número possível dos desafios fornecidos a seguir.
+A edição mais recente do [Relatório de Mobilidade Ericsson](https://www.ericsson.com/en/reports-and-papers/mobility-report/dataforecasts/traffic-by-application) apontou que no ano de 2022 71% do tráfego da rede móvel mundial foi constituído por transmissão de vídeo e que até 2028 esta demanda deve aumentar em 9%. Deste modo, o gerenciamento de redes celulares se mostra um elemento fundamental para promover a experiência de uso deste tipo de serviço, fator este que tende a proporcionar novas oportunidades de negócio e pesquisa à medida em que o uso da rede 5G se expande.
+
+Em vista disso, a Hackathon SMARTNESS apresenta os seguintes desafios que podem contribuir para o desenvolvimento de novas soluções de gerenciamento de redes móveis, visando atender a crescente demanda de tráfego de vídeo e a otimização da qualidade de experiência do usuário.
 
 - 📊 **Visualização usando o PathsViewer**
 
@@ -47,6 +49,7 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
   O desafio proposto é inferir a qual Estação Rádio Base (ERB) o dispositivo móvel está conectado, com base nas coordenadas do celular correlacionado com as antenas na proximidade. Isso envolve o uso de técnicas de processamento de dados e aprendizado de máquina para analisar os dados de localização e dados das antenas próximas e identificar a ERB mais provável. As equipes podem utilizar diferentes técnicas, como regressão logística, classificação por árvores de decisão, redes neurais e outras técnicas de aprendizado de máquina para resolver esse desafio. A precisão da inferência pode ser medida utilizando métricas como a acurácia e a taxa de falsos positivos.
 
 # 🤔 Critérios de avaliação
+- Os participantes deverão resolver o maior número possível dos desafios fornecidos
 - Pré-processamento dos dados
 - Representação dos dados e estratégia de composição de atributos
 - Estratégia de seleção do modelo escolhido
