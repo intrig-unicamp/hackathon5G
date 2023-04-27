@@ -44,7 +44,7 @@ Em vista disso, a Hackathon SMARTNESS apresenta os seguintes desafios que podem 
   As equipes deverão utilizar técnicas de aprendizado de máquina para prever a qualidade de transmissão de vídeo usando, separadamente, os dados de localização correlacionado com as antenas na proximidade e métricas da rede (como qualidade do sinal, tecnologia, frequência).
 
 ---
-- 🔮🗂️ **Inferir a qual Estação Rádio Base o celular está conectado**
+- 🔮🗂️ **Inferir a qual Estação Rádio Base um celular está conectado**
 
   O desafio proposto é inferir a qual Estação Rádio Base (ERB) o dispositivo móvel está conectado, com base nas coordenadas do celular correlacionado com as antenas na proximidade. Isso envolve o uso de técnicas de processamento de dados e aprendizado de máquina para analisar os dados de localização e dados das antenas próximas e identificar a ERB mais provável. As equipes podem utilizar diferentes técnicas, como regressão logística, classificação por árvores de decisão, redes neurais e outras técnicas de aprendizado de máquina para resolver esse desafio. A precisão da inferência pode ser medida utilizando métricas como a acurácia e a taxa de falsos positivos.
 
