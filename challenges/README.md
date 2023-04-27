@@ -11,40 +11,82 @@ Como parte da Hackathon, os participantes deverão resolver o maior número poss
 
 - 📊 Visualização usando o paths-viewer
 
-- 🔮 Predição de qualidade de sinal mono-variada
+- 🔮 Predição de qualidade de sinal
 
-    Conjuntos de dados recomendados: `g-nettrack-pro`
-
-- 🔮 Predição de qualidade de sinal multi-variada
-
+    **Conjunto de dados**
+    
+    **O desafio**
+    
+    **A entrega**
     Conjuntos de dados recomendados: `g-nettrack-pro`
     (CQI, SNNR, xxx)
 
 - 🔮 Predição do tipo de mobilidade
 
-    Conjuntos de dados recomendados: `g-nettrack-pro`
-
+    **Conjunto de dados**
+    `g-nettrack-pro`
+    
+    **O desafio**
+    
+    **A entrega**
+    
 - 🤝 Correlação de atributos
 
+    **Conjunto de dados**
+    
+    **O desafio**
+    
+    **A entrega**
+   
 - 🔮🗂️ Inferir a qual ERB (estação rádio base) o celular está conectado
 
-    Conjuntos de dados recomendados: `g-nettrack-pro` + `mosaico`
+    **Conjunto de dados**
+    
+     `g-nettrack-pro` + `mosaico`
+    
+    **O desafio**
+    
+    **A entrega**
 
 - 🔮🗂️ Predição da qualidade do sinal dadas as coordenadas do celular
 
-    Conjuntos de dados recomendados: `g-nettrack-pro` + `mosaico`
-
+    **Conjunto de dados**
+    
+    `g-nettrack-pro` + `mosaico`
+    
+    **O desafio**
+    
+    **A entrega**
+   
 - 🔮🗂️ Predição da qualidade do stream de vídeo de acordo com as coordenadas do celular
 
-    Conjuntos de dados recomendados: `youtube-qoe-pcap` + `g-nettrack-pro` + `mosaico`
-
+    **Conjunto de dados**
+    
+    `youtube-qoe-pcap` + `g-nettrack-pro` + `mosaico`
+    
+    **O desafio**
+    
+    **A entrega**
+    
 - 🔮🗂️ Predição da qualidade do stream de vídeo dada a qualidade do sinal
 
-    Conjuntos de dados recomendados: `youtube-qoe-pcap` + `g-nettrack-pro`
+    **Conjunto de dados**
+    
+    `youtube-qoe-pcap` + `g-nettrack-pro`
+    
+    **O desafio**
+    
+    **A entrega**
 
 - 🤝 Análise da tendências de construção e de características dos ERBs no Brasil. 
 
-    Conjuntos de dados recomendados: `mosaico`
+    **Conjunto de dados**
+    
+    `mosaico`
+   
+    **O desafio**
+
+    **A entrega**
 
 
 # 🤔 Critérios de avaliação
