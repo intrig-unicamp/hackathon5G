@@ -1,16 +1,16 @@
 # Datasets
-> Nessa pasta contém os conjuntos de dados disponibilizados para a _Hackathon SMARTNESS / 5G Dataset Challenge_
+> Essa pasta contém os conjuntos de dados disponibilizados para a _Hackathon SMARTNESS / 5G Dataset Challenge_
 
 Para a Hackathon, foi feita a coleta de dados de utilização da rede 5G no Brasil. A metodologia de coleta de dados foi com base em testes de campo. Os experimentos foram conduzidos em um _Samsung S21 5G_.
 
-Abaixo enumeramos os dois conjuntos de dados produzidos e um auxiliar. Cada conjunto de dados possui um Jupyter Notebook demonstrando uma exploração de dados inicial para os participantes conhecerem a estrutura dos dados.
+Abaixo, enumeramos os dois conjuntos de dados produzidos e um auxiliar. Cada conjunto de dados possui um Jupyter Notebook demonstrando uma exploração de dados inicial para os participantes conhecerem a estrutura dos dados.
 
 # 🎬 Monitoramento do tráfego
-O YouTube tem integrado nos seus diversos clientes (Web, Web Mobile, IFrame, e aplicativos iOS e Android) um instrumento de coleta de métricas de experiência do usuário. Analisamos o código do YouTube Web e identificamos as métricas monitoradas, as quais são iguais nos demais clientes. Os [dados iniciais](./youtube-qoe-har) desse experimento foram coletados pelo Chrome DevTools no formato HAR.
+O YouTube tem integrado nos seus diversos clientes (Web, Web Mobile, IFrame, e aplicativos iOS e Android) um instrumento de coleta de métricas de experiência do usuário. Analisamos o código do YouTube Web e identificamos as métricas monitoradas (as quais são iguais nos demais clientes). Os [dados iniciais](./youtube-qoe-har) desse experimento foram coletados pelo Chrome DevTools no formato HAR apenas com o intuito de compreender o formato dos dados.
 
-Para gerar os dados de tráfego no _Samsung S21 5G_, tocamos uma playlist com alta resolução no YouTube Web Mobile, e a interceptação das métricas de tráfego foi feita pelo [`PCAPdroid`](https://github.com/emanuele-f/PCAPdroid) e o plugin [`PCAPdroid-mitm`](https://github.com/emanuele-f/PCAPdroid-mitm) para descriptografar os pacotes TLS.
+Para gerar os dados de tráfego no _Samsung S21 5G_, reproduzimos uma playlist com vídeos de alta resolução no YouTube Web Mobile, e a interceptação das métricas de tráfego foi feita pelo [`PCAPdroid`](https://github.com/emanuele-f/PCAPdroid) e o plugin [`PCAPdroid-mitm`](https://github.com/emanuele-f/PCAPdroid-mitm) para descriptografar os pacotes TLS.
 
-> 🛠️ Futuramente, será utilizado o aplicativo do YouTube para representar uma situação mais próxima da realidade dos clientes móveis. Por enquanto, isso ainda não foi feito porque o aplicativo do YouTube utiliza o protocolo QUIC, que não é suportado pela versão atual do plugin, mas será suportado na [próxima versão](https://github.com/mitmproxy/mitmproxy/blob/main/CHANGELOG.md).
+> 🛠️ Futuramente, o experimento vai utilizar o aplicativo do YouTube para representar uma situação mais próxima da realidade dos clientes móveis. Por enquanto, isso ainda não foi feito porque o aplicativo do YouTube utiliza o protocolo QUIC, que não é suportado pela versão atual do plugin, mas será suportado na [próxima versão](https://github.com/mitmproxy/mitmproxy/blob/main/CHANGELOG.md#unreleased-mitmproxy-next).
 
 - [Dados `youtube-qoe-pcap`](./youtube-qoe-pcap) (coletado pelo PCAPdroid)
 - [Dados `youtube-qoe-har`](./youtube-qoe-har) (coletado pelo Chrome DevTools)
@@ -29,8 +29,8 @@ Para gerar os dados de tráfego no _Samsung S21 5G_, tocamos uma playlist com al
 ## Configuração inicial
 - Na seção _Traffic inspection_ nas configurações do PCAPdroid (ícone ⚙️ no canto superior direito), desabilite a opção _Full payload_
 - Na seção _Capture_ nas configurações do PCAPdroid, habilite a opção _PCAPdroid trailer_
-- defina o formato da captura de tráfego (_traffic dump format_) como _PCAP file_
-- Selecione o aplicativo que vai capturar o tráfego (nesse caso, o navegador que vai abrir o YouTube Web Mobile. ex.: Google Chrome, Firefox, Samsung Internet)
+- Defina o formato da captura de tráfego (_traffic dump format_) como _PCAP file_
+- Selecione o aplicativo que vai capturar o tráfego (nesse caso, o navegador que vai abrir o YouTube Web Mobile. Exemplo: Google Chrome, Firefox, Samsung Internet)
 
 ## Capturar e exportar
 - Entre no aplicativo PCAPdroid
@@ -40,10 +40,10 @@ Para gerar os dados de tráfego no _Samsung S21 5G_, tocamos uma playlist com al
 - Para finalizar a captura de tráfego, entre novamente no PCAPdroid
 - Pressione o botão de parar (ícone ⬜ no canto superior direito)
 - Pressione _OK_ no diálogo informando que o tráfego foi salvo
-- Se um arquivo com chaves SSL `sslkeylogfile.txt` for gerado, um diálogo será aberto para salvá-lo:
-    - Salve na pasta desejada, como em `~/Download/PCAPdroid` (o mesmo local que as capturas PCAP são salvas)
-    - Selecione o arquivo de captura PCAP mais recente para copiar seu nome
-    - Edite a extensão `.pcap` para `.txt`
+- Se for gerado um arquivo com chaves SSL `sslkeylogfile.txt`, um diálogo será aberto para salvá-lo:
+    - Vá para a pasta na qual o arquivo derá ser salvo, como em `~/Download/PCAPdroid` (o mesmo local que as capturas PCAP são salvas)
+    - Selecione o arquivo de captura PCAP mais recente para copiar seu nome (para facilitar a identificação posterior)
+    - Edite a extensão `.pcap` para `.txt` do arquivo a ser salvo
     - Salve
 
 ## Juntar `sslkeylogfile.txt` e `.pcap` em um único arquivo `.pcapng`
@@ -58,7 +58,7 @@ editcap --inject-secrets tls,${filename}.txt ${filename}.pcap ${filename}.pcapng
 
 Alternativamente, podemos informar os diferentes nomes individualmente:
 ```bash
-editcap --inject-secrets tls,sslkeylogfile_abc.txt captura_abc.pcap captura_abc_unica.pcapng
+editcap --inject-secrets tls,sslkeylogfile_abc.txt captura_abc.pcap captura_e_sslkeys_abc.pcapng
 ```
 
 </details>
@@ -70,7 +70,7 @@ As métricas de rede foram coletadas pela ferramenta [G-NetTrack Pro](https://gy
 - [Exploração de dados / Jupyter Notebook](./g-nettrack-pro.ipynb)
 
 # 📡 ERBs Mosaico/Anatel (auxiliar)
-Em conjunto com os dados de tráfego e rede móvel, também podemos fazer o **enriquecimento de dados** com outros datasets, como por exemplo, o Mosaico da Anatel, que contém informações sobre todas as estações de telecomunicações (ERBs) registradas no Brasil. Entre os dados armazenados no Mosaico estão informações sobre os proprietários das estações, as tecnologias e equipamentos utilizados, as frequências de transmissão e recepção, a localização geográfica das estações e as datas de licenciamento e validade.
+Em conjunto com os dados de tráfego e rede móvel, também podemos fazer o **enriquecimento de dados** com outros datasets, como por exemplo, usando o Mosaico da Anatel, que contém informações sobre todas as estações de telecomunicações (ERBs) registradas no Brasil. Dentre os dados disponibilizados pelo Mosaico, incluem: as tecnologias e equipamentos utilizados, as frequências de transmissão e recepção, a localização geográfica das estações, as datas de licenciamento e validade, informações sobre os proprietários das estações, entre outras.
 
 - [Dados `mosaico`](./mosaico)
 - [Exploração de dados / Jupyter Notebook](./mosaico.ipynb)
