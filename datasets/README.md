@@ -66,7 +66,7 @@ editcap --inject-secrets tls,sslkeylogfile_abc.txt captura_abc.pcap captura_e_ss
 # 📶 Monitoramento da rede móvel
 As métricas de rede foram coletadas pela ferramenta G-NetTrack Pro ([manual](https://gyokovsolutions.com/manual-g-nettrack/#:~:text=Here%20is%20description%20of%20logfile%20columns)) em um trajeto com cobertura 5G da operadora Claro, como por exemplo, pelo centro de São Paulo, Av. Paulista, Butantã, e arredores.
 
-- [Dados `g-nettrack-pro`](./g-nettrack-pro)
+- [Dados `g-nettrack`](./g-nettrack-pro)
 - [Exploração de dados / Jupyter Notebook](./g-nettrack-pro.ipynb)
 
 # 📡 ERBs Mosaico/Anatel (auxiliar)

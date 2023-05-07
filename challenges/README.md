@@ -20,28 +20,32 @@ Em vista disso, a Hackathon SMARTNESS apresenta os seguintes desafios que podem 
 ---
 - 🔮📶 **Predição de qualidade de sinal em determinado local**
 
-  Com o objetivo de prever a qualidade de sinal dado um ponto `(latitude, longitude)`, as equipes devem empregar técnicas de aprendizado de máquina no conjunto de dados `g-nettrack-pro`. Uma estratégia pode ser a combinação de diferentes conjuntos de dados para enriquecimento de dados, como, por exemplo, usar a base `g-nettrack-pro` enriquecida com o `mosaico` para prover informações das antenas na proximidade, como a localização, azimute, densidade de antenas, frequência e tecnologia.
+  Com o objetivo de prever a qualidade de sinal dado um ponto `(latitude, longitude)`, as equipes devem empregar técnicas de aprendizado de máquina no conjunto de dados `g-nettrack`. Uma estratégia pode ser a combinação de diferentes conjuntos de dados para enriquecimento de dados, como, por exemplo, usar a base `g-nettrack` enriquecida com o `mosaico` para prover informações das antenas na proximidade, como a localização, azimute, densidade de antenas, frequência e tecnologia.
 
   As equipes deverão utilizar técnicas de aprendizado de máquina, como predição mono-variada e multi-variada, para prever os valores de um indicador de qualidade de sinal de escolha, tal como QUAL, CQI e SNNR.
 
 ---
 - 🔮🚗 **Predição do tipo de mobilidade**
 
-  Esse desafio consiste em utilizar métodos não-supervisionados de aprendizado de máquina para prever o tipo de mobilidade (pedestre, veículo, metrô/trem) de um dispositivo móvel com base nos dados de localização não rotulados fornecidos pelo conjunto de dados `g-nettrack-pro`. Essa tarefa pode ser abordada de diversas formas, como, por exemplo, na forma de um problema de classificação baseada em clusterização (classificação não-supervisionada), onde o modelo de aprendizado de máquina deve classificar cada registro do conjunto de dados em uma das classes de mobilidade possíveis.
+  Esse desafio consiste em utilizar métodos não-supervisionados de aprendizado de máquina para prever o tipo de mobilidade (pedestre, veículo, metrô/trem) de um dispositivo móvel com base nos dados de localização não rotulados fornecidos pelo conjunto de dados `g-nettrack`. Essa tarefa pode ser abordada de diversas formas, como, por exemplo, na forma de um problema de classificação baseada em clusterização (classificação não-supervisionada), onde o modelo de aprendizado de máquina deve classificar cada registro do conjunto de dados em uma das classes de mobilidade possíveis.
 
 ---
-- 🔮🎬 **Predição da qualidade de transmissão de vídeo**
+- 🔮🎬 **Predição da qualidade de experiência (QoE) da transmissão de vídeo**
 
-  O desafio de predição da qualidade de transmissão de vídeo adaptativo (YouTube) consiste em utilizar técnicas de aprendizado de máquina para prever a qualidade da transmissão de vídeo em dispositivos móveis. A base `youtube-qoe` fornece as métricas de qualidade de transmissão. O objetivo é criar dois modelos de predição que levem em conta informações como as coordenadas do celular, as características da rede, a tecnologia utilizada, entre outras variáveis, para estimar a qualidade de transmissão de vídeo. Com isso, é possível melhorar a experiência do usuário, garantindo que a transmissão de vídeo seja realizada com a melhor qualidade possível, considerando as condições da rede e do ambiente em que o usuário está localizado.
+  O desafio de predição da qualidade de experiência (QoE) da transmissão de vídeo adaptativo (YouTube) consiste em utilizar técnicas de aprendizado de máquina para prever a QoE da transmissão de vídeo em dispositivos móveis. A base `youtube-qoe` fornece as métricas da transmissão de vídeo. O objetivo é criar dois modelos de predição que levem em conta informações como as coordenadas do celular, as características da rede, a tecnologia utilizada, entre outras variáveis, para estimar a QoE da transmissão. Com isso, é possível melhorar a experiência do usuário, garantindo que a transmissão de vídeo seja realizada com a melhor qualidade possível, considerando as condições da rede e da região em que o usuário está localizado.
 
-  Os modelos devem prever a qualidade de transmissão de vídeo com base em entradas distintas:
-  - Modelo 1: faz a predição com base nos dados de localização, obtidos no conjunto `g-nettrack-pro` correlacionado com o `mosaico` para obter as antenas na proximidade; e
-  - Modelo 2: faz a predição com base nas métricas da rede (como qualidade do sinal, tecnologia, frequência), obtidos no conjunto `g-nettrack-pro`.
+  Os modelos desenvolvidos devem prever a QoE da transmissão com base em entradas distintas:
+  - Modelo 1: faz a predição com base nos dados de localização, obtidos no conjunto `g-nettrack` correlacionado com o `mosaico` para obter as antenas na proximidade; e
+  - Modelo 2: faz a predição com base nas métricas da rede (tal como qualidade do sinal, tecnologia), obtidos no conjunto `g-nettrack`.
+
+  Em resumo, o Modelo 1 deverá considerar apenas a disponibilidade de antenas na proximidade do usuário (tal como a tecnologia, potência e outros fatores das ERBs que podem influenciem na melhor qualidade da rede em determinada região) para inferir a QoE. Em contrapartida, o Modelo 2 leva em consideração apenas as condições da rede (métricas de rede).
+
+  Além de trabalhar no desenvolvimento dos modelos, as equipes devem criar uma função para definir a QoE. Uma alternativa simplória é relacionar a QoE diretamente com a resolução do vídeo, porém, é evidente que um vídeo de alta resolução com travamentos constantes não possui uma boa QoE. Ou também no cenário oposto, um vídeo totalmente sem travamentos e flúido, não apresenta boa QoE se for transmitido em baixíssima resolução.
 
 ---
 - 🔮📡 **Inferir a qual Célula/Estação Rádio Base um celular está conectado**
 
-  O desafio proposto é inferir a qual Célula/Estação Rádio Base (ERB) o dispositivo móvel está conectado, com base nas coordenadas do celular, usando o conjunto de dados `g-nettrack-pro` correlacionado com a base `mosaico` para obter as antenas na proximidade. Isso envolve o uso de técnicas de processamento de dados e aprendizado de máquina para analisar os dados de localização e antenas próximas, além de conhecimento básico de implantação da arquitetura física de redes móveis.
+  O desafio proposto é inferir a qual Célula/Estação Rádio Base (ERB) o dispositivo móvel está conectado, com base nas coordenadas do celular, usando o conjunto de dados `g-nettrack` correlacionado com a base `mosaico` para obter as antenas na proximidade. Isso envolve o uso de técnicas de processamento de dados e aprendizado de máquina para analisar os dados de localização e antenas próximas, além de conhecimento básico de implantação da arquitetura física de redes móveis.
 
   Deve ser levado em consideração que as antenas de uma ERB podem ser direcionais (Azimute > 0) ou omnidirecionais (Azimute = 0), isto é, podem direcionar o sinal transmitido para uma determinada direção ou transmitir sinal para todas as direções ao seu redor, respectivamente.
 
