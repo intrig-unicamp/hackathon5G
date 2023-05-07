@@ -18,9 +18,9 @@ Em vista disso, a Hackathon SMARTNESS apresenta os seguintes desafios que podem 
   **A entrega**: De modo que esse desafio em específico não envolve a aplicação de técnicas de aprendizado de máquina (tal como os demais a seguir), não é solicitado a entrega de um Jupyter Notebook/Colab. Em vez disso, espera-se que a submissão desse desafio seja composta de uma descrição do que foi realizado pela equipe, os insights obtidos, sugestões de melhorias para a ferramenta, eventuais códigos produzidos para o tratamento de dados acompanhado de um vídeo ou capturas de tela que mostrem a interface do PathsViewer com os conjuntos de dados fornecidos. É importante que a entrega mostre as funcionalidades utilizadas da ferramenta.
 
 ---
-- 🔮📶 **Predição de qualidade de sinal**
+- 🔮📶 **Predição de qualidade de sinal em determinado local**
 
-  Com o objetivo de prever a qualidade de sinal, as equipes devem empregar técnicas de aprendizado de máquina no conjunto de dados `g-nettrack-pro`. Uma estratégia pode ser a combinação de diferentes conjuntos de dados para enriquecimento de dados, como, por exemplo, usar a base `g-nettrack-pro` enriquecida com o `mosaico` para prover informações das antenas na proximidade, como a localização, azimute, densidade de antenas, frequência e tecnologia.
+  Com o objetivo de prever a qualidade de sinal dado um ponto `(latitude, longitude)`, as equipes devem empregar técnicas de aprendizado de máquina no conjunto de dados `g-nettrack-pro`. Uma estratégia pode ser a combinação de diferentes conjuntos de dados para enriquecimento de dados, como, por exemplo, usar a base `g-nettrack-pro` enriquecida com o `mosaico` para prover informações das antenas na proximidade, como a localização, azimute, densidade de antenas, frequência e tecnologia.
 
   As equipes deverão utilizar técnicas de aprendizado de máquina, como predição mono-variada e multi-variada, para prever os valores de um indicador de qualidade de sinal de escolha, tal como QUAL, CQI e SNNR.
 
@@ -42,6 +42,8 @@ Em vista disso, a Hackathon SMARTNESS apresenta os seguintes desafios que podem 
 - 🔮📡 **Inferir a qual Célula/Estação Rádio Base um celular está conectado**
 
   O desafio proposto é inferir a qual Célula/Estação Rádio Base (ERB) o dispositivo móvel está conectado, com base nas coordenadas do celular, usando o conjunto de dados `g-nettrack-pro` correlacionado com a base `mosaico` para obter as antenas na proximidade. Isso envolve o uso de técnicas de processamento de dados e aprendizado de máquina para analisar os dados de localização e antenas próximas, além de conhecimento básico de implantação da arquitetura física de redes móveis.
+
+  Deve ser levado em consideração que as antenas de uma ERB podem ser direcionais (Azimute > 0) ou omnidirecionais (Azimute = 0), isto é, podem direcionar o sinal transmitido para uma determinada direção ou transmitir sinal para todas as direções ao seu redor, respectivamente.
 
 # Critérios de avaliação
 - Os participantes devem resolver o maior número possível dos desafios fornecidos
