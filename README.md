@@ -1,6 +1,9 @@
 # HACKATHON SMARTNESS / 5G DATASET CHALLENGE
 > _Desenvolvendo soluções e insights usando aprendizado de máquina nos dados de redes 5G no Brasil_
 
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main?labpath=/)
+[![nbviewer](https://raw.githubusercontent.com/jupyter/design/main/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/intrig-unicamp/hackathon5G/tree/main/)
+
 O avanço do 5G tem sido uma das transformações mais significativas no mundo da tecnologia nos últimos anos, e o Brasil não está ficando para trás nessa corrida. Com uma latência e velocidade de transmissão de dados sem precedentes, o 5G promete revolucionar a maneira como nos conectamos e nos comunicamos uns com os outros, além de possibilitar infinitas novas oportunidades para a inovação e empreendedorismo em diversas áreas como a saúde, a agricultura, a indústria e muito mais.
 
 Nesse sentido, a _Hackathon SMARTNESS / 5G Dataset Challenge_ tem como objetivo instigar o desenvolvimento de soluções inovadoras e elaboração de _insights_ com base nas bases de dados (fornecidas pela comissão organizadora da Hackathon SMARTNESS) compostas por dados de uso de serviços de _streaming_ de vídeo adaptativo (YouTube) e redes 5G no Brasil. Para suportar a resolução dos problemas, as equipes poderão usar bases auxiliares para enriquecimento de dados.
@@ -12,20 +15,31 @@ Para desenvolver soluções para a Hackathon, é necessário ter um computador (
 
 Além disso, é desejável que os participantes tenham conhecimentos nos seguintes assuntos:
 - Processamento e análise de dados
-- Métodos de Aprendizado de Máquina (tais como regressão, clusterização, árvores de decisão, florestas aleatórias (_Random Forest_), k-vizinhos mais próximos (kNN), análise de discriminante linear)
+- Métodos de Aprendizado de Máquina, tais como regressão, clusterização, árvores de decisão, florestas aleatórias (_Random Forest_), k-vizinhos mais próximos (kNN), análise de discriminante linear
 - Programação em _Python_
-- _Jupyter Notebook_/_Google Colab_
+- _Jupyter Notebook_
 
-# 1º passo: Datasets
+# 1º Passo: Utilizar este repositório
+
+> ⚠️ Esse projeto depende do Pandas 2.0, o qual não está disponível no Google Colab (no corrente momento de escrita  10/maio/2023), desse modo, não é possível utilizar essa plataforma para execução.
+
+- **Binder**
+
+  É possível utilizar esse repositório de forma online, sem configurações adicionais. Basta clicar no botão do Binder
+
+  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main?labpath=/)
+
+
+# 2º passo: Datasets
 Consulte [aqui](datasets) a pasta com os conjuntos de dados disponibilizados. Os dados estão documentados no [README](datasets/README.md) dessa pasta.
 
-# 2º passo: Desafios
-Consulte [aqui](challenges) a pasta com os desafios propostos. O [README](challenges/README.md) dessa pasta fornece as instruções necessárias sobre cada desafio.
+# 3º passo: Desafios
+Consulte [aqui](challenges) a pasta com os desafios propostos. O [README](challenges/README.md) dessa pasta fornece as instruções necessárias sobre cada desafio. Também são fornecidos Notebooks auxiliares para as equipes iniciarem mais rapidamente o desenvolvimento dos desafios.
 
-# 3º passo: Entrega
+# 4º passo: Entrega
 > **[Google Forms](https://forms.gle/mZd3qTaYuCifXgLW7) para submissão das soluções**
 
-As equipes devem submeter os Jupyter Notebooks/Colab produzidos em cada solução, que devem conter um storytelling dos dados cobrindo a descrição do que foi realizado pela equipe, os insights obtidos, o pré-processamento, os modelos de aprendizado de máquina desenvolvidos, a avaliação de desempenho dos modelos, a escolha do modelo de aprendizado de máquina, entre outros tópicos que as equipes julguem pertinente.
+As equipes devem submeter os Jupyter Notebooks produzidos em cada solução, que devem conter um storytelling dos dados cobrindo a descrição do que foi realizado pela equipe, os insights obtidos, o pré-processamento, os modelos de aprendizado de máquina desenvolvidos, a avaliação de desempenho dos modelos, a escolha do modelo de aprendizado de máquina, entre outros tópicos que as equipes julguem pertinente.
 
 Atente-se ao roteiro dos desafios, aos critérios de avaliação e a entrega diferenciada de alguns desafios. Garanta que os avaliadores da comissão organizadora da Hackathon SMARTNESS tenham acesso a todos os arquivos da sua submissão. As equipes devem se assegurar de fornecer todos os demais conjuntos de dados que utilizaram. Não deve ser feito o acesso de arquivos do Google Drive do usuário atual, tal como:
 

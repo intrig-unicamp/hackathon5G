@@ -1,10 +1,15 @@
 # Desafios
 > Essa pasta contém os desafios propostos para a _Hackathon SMARTNESS / 5G Dataset Challenge_
 
+> 📚 Notebooks auxiliares
+> - [Template para submissão](./submission-template.ipynb) dos desafios
+> - [Primeiros passos](./get-started.ipynb) em Aprendizado de Máquina e utilização dos conjuntos de dados
+
 A edição mais recente do [Relatório de Mobilidade Ericsson](https://www.ericsson.com/en/reports-and-papers/mobility-report/dataforecasts/traffic-by-application) apontou que, no ano de 2022, 71% do tráfego da rede móvel mundial foi constituído por transmissão de vídeo e até 2028 esta demanda deverá aumentar em 9%. Nesse cenário, o gerenciamento e análise de redes móveis se mostram elementos fundamentais para promover uma melhor experiência de uso desse tipo de serviço, fator este que tende a proporcionar novas oportunidades de negócio e pesquisa à medida em que o uso da rede 5G se expande.
 
 Em vista disso, a Hackathon SMARTNESS apresenta os seguintes desafios que podem contribuir para o desenvolvimento de novas soluções de gerenciamento e análise de redes móveis, visando atender a crescente demanda de tráfego de vídeo e a otimização da qualidade de experiência do usuário.
 
+---
 - 📊🔍 **Visualização usando o PathsViewer**
 
   **A ferramenta**: PathsViewer é uma interface para visualização de dados espaço-temporais em tempo real ou pós-eventos. Essa ferramenta busca suprir a demanda por ferramentas de visualização de trajetórias de objetos, em vista do grande interesse em pesquisas nesse tipo de dado.
@@ -15,14 +20,14 @@ Em vista disso, a Hackathon SMARTNESS apresenta os seguintes desafios que podem 
 
   As equipes devem explorar as funcionalidades do PathViewer, como ajuste de escala, visualização em mapa 2D ou satélite, envio de múltiplos conjuntos de dados, entre outras. Com isso, é possível gerar visualizações claras e informativas que ajudem os usuários a visualizar as informações contidas nos dados de trajetórias de objetos.
 
-  **A entrega**: De modo que esse desafio em específico não envolve a aplicação de técnicas de aprendizado de máquina (tal como os demais a seguir), não é solicitado a entrega de um Jupyter Notebook/Colab. Em vez disso, espera-se que a submissão desse desafio seja composta de uma descrição do que foi realizado pela equipe, os insights obtidos, sugestões de melhorias para a ferramenta, eventuais códigos produzidos para o tratamento de dados acompanhado de um vídeo ou capturas de tela que mostrem a interface do PathsViewer com os conjuntos de dados fornecidos. É importante que a entrega mostre as funcionalidades utilizadas da ferramenta.
+  **A entrega**: De modo que esse desafio em específico não envolve a aplicação de técnicas de aprendizado de máquina (tal como os demais a seguir), não é solicitado a entrega de um Jupyter Notebook. Em vez disso, espera-se que a submissão desse desafio seja composta de uma descrição do que foi realizado pela equipe, os insights obtidos, sugestões de melhorias para a ferramenta, eventuais códigos produzidos para o tratamento de dados acompanhado de um vídeo ou capturas de tela que mostrem a interface do PathsViewer com os conjuntos de dados fornecidos. É importante que a entrega mostre as funcionalidades utilizadas da ferramenta.
 
 ---
-- 🔮📶 **Predição de qualidade de sinal em determinado local**
+- 🔮📶 **Predição de qualidade de sinal**
 
-  Com o objetivo de prever a qualidade de sinal dado um ponto `(latitude, longitude)`, as equipes devem empregar técnicas de aprendizado de máquina no conjunto de dados `g-nettrack`. Uma estratégia pode ser a combinação de diferentes conjuntos de dados para enriquecimento de dados, como, por exemplo, usar a base `g-nettrack` enriquecida com o `mosaico` para prover informações das antenas na proximidade, como a localização, azimute, densidade de antenas, frequência e tecnologia.
+  O objetivo deste desafio é inferir a qualidade de sinal com base nos atributos fornecidos na base `g-nettrack`. As equipes podem combinar os dados fornecidos com informações presentes em outros conjuntos com o intuito de complementar e enriquecer os dados disponíveis. Por exemplo, é possível combinar os dados da base `g-nettrack` com as do `mosaico` para prover informações das antenas na proximidade, como localização, azimute, densidade de antenas, frequência e tecnologia.
 
-  As equipes deverão utilizar técnicas de aprendizado de máquina, como predição mono-variada e multi-variada, para prever os valores de um indicador de qualidade de sinal de escolha, tal como QUAL, CQI e SNNR.
+  As equipes poderão utilizar modelos estatísticos e/ou técnicas de aprendizado de máquina, como modelos de predição mono e multivariados, para inferir os valores de um indicador de qualidade de sinal de escolha, tal como QUAL, CQI e SNNR.
 
 ---
 - 🔮🚗 **Predição do tipo de mobilidade**

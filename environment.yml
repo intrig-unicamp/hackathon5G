@@ -1,0 +1,14 @@
+name: hackathon5G
+channels:
+  - conda-forge
+dependencies:
+  # general
+  - python=3.11
+  - jupyterlab=3
+  # specific
+  - pyshark=0.6
+  - pandas=2.0.1
+  - numpy=1.24.3
+  - scikit-learn=1.2.2
+  - seaborn=0.12.2
+  - plotly=5.14.1

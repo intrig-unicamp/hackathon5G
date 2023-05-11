@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wget --content-disposition --directory-prefix datasets/youtube-qoe-pcap "https://docs.google.com/uc?export=download&confirm=t&id=1vDJ92Y06Grnnxo6l31vBX7A0dNKGXS62"
+
+exec "$@"
