@@ -11,7 +11,7 @@ Nesse sentido, a _Hackathon SMARTNESS / 5G Dataset Challenge_ tem como objetivo 
 As equipes poderão desenvolver seus projetos em diversas linhas, como, por exemplo, análise exploratória de dados, desenvolvimento de _insights_ inovadores usando 5G e os conjuntos de dados disponibilizados, modelos de Aprendizado de Máquina para predição, classificação, agrupamento, suporte à decisão, desenvolvimento de modelos de desempenho de aplicações no contexto de 5G e muito mais.
 
 # Requisitos
-Para desenvolver soluções para a Hackathon, é necessário ter um computador (_i._) capaz de realizar o processamento de dados e AM no _Jupyter Notebook_ ou (_ii._) ter acesso aos recursos em nuvem através do _Google Colab_.
+Para desenvolver soluções para a Hackathon, é necessário ter um computador para realizar o processamento de dados e AM no _Jupyter Notebook_.
 
 Além disso, é desejável que os participantes tenham conhecimentos nos seguintes assuntos:
 - Processamento e análise de dados
@@ -21,14 +21,51 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
 
 # 1º Passo: Utilizar este repositório
 
-> ⚠️ Esse projeto depende do Pandas 2.0, o qual não está disponível no Google Colab (no corrente momento de escrita  10/maio/2023), desse modo, não é possível utilizar essa plataforma para execução.
+> ⚠️ Esse projeto não possui suporte oficial ao Google Colab
 
 - **Binder**
 
-  É possível utilizar esse repositório de forma online, sem configurações adicionais. Basta clicar no botão do Binder
+  É possível utilizar esse repositório de forma online, sem configurações adicionais. Basta clicar na _badge_ do Binder que o repositório inteiro será carregado
 
   [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main?labpath=/)
 
+- **Localmente (em Linux)**
+
+  Esse repositório pode ser executado localmente utilizando o ambiente [Mamba](https://mamba.readthedocs.io/en/latest/installation.html) ou [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html), e baixando os conjuntos de dados adicionais.
+
+  1. Clone o repositório em sua máquina dentro da pasta desejada
+      ```
+      git clone --depth=1 https://github.com/intrig-unicamp/hackathon5G.git
+      cd hackathon5G
+      ```
+
+  2. Crie o ambiente a partir do arquivo `environment.yml`
+      ```
+      # se usar o Micromamba:
+      micromamba env create -f environment.yml -y
+
+      # se usar o Conda:
+      conda env create -f environment.yml
+      ```
+
+  3. Ative o ambiente
+      ```
+      # se usar o Micromamba:
+      micromamba activate hackathon5G
+
+      # se usar o Conda:
+      conda activate hackathon5G
+      ```
+
+  4. Inicie o Jupyter Lab. Se uma janela do navegador não for aberta com o Jupyter Lab, basta clicar em um dos links de acesso disponíveis no terminal
+      ```
+      jupyter lab
+      ```
+
+  5. Baixe os conjuntos de dados adicionais (PCAPs do `youtube-qoe`), utilize o seguinte comando
+      ```
+      wget --content-disposition --directory-prefix datasets/youtube-qoe-pcap "https://docs.google.com/uc?export=download&confirm=t&id=1vDJ92Y06Grnnxo6l31vBX7A0dNKGXS62"
+      ```
 
 # 2º passo: Datasets
 Consulte [aqui](datasets) a pasta com os conjuntos de dados disponibilizados. Os dados estão documentados no [README](datasets/README.md) dessa pasta.
@@ -39,18 +76,9 @@ Consulte [aqui](challenges) a pasta com os desafios propostos. O [README](challe
 # 4º passo: Entrega
 > **[Google Forms](https://forms.gle/mZd3qTaYuCifXgLW7) para submissão das soluções**
 
-As equipes devem submeter os Jupyter Notebooks produzidos em cada solução, que devem conter um storytelling dos dados cobrindo a descrição do que foi realizado pela equipe, os insights obtidos, o pré-processamento, os modelos de aprendizado de máquina desenvolvidos, a avaliação de desempenho dos modelos, a escolha do modelo de aprendizado de máquina, entre outros tópicos que as equipes julguem pertinente.
+As equipes devem submeter os arquivos do Jupyter Notebook produzidos em cada solução, que devem conter um storytelling dos dados cobrindo a descrição do que foi realizado pela equipe, os insights obtidos, o pré-processamento, os modelos de aprendizado de máquina desenvolvidos, a avaliação de desempenho dos modelos, a escolha do modelo de aprendizado de máquina, entre outros tópicos que as equipes julguem pertinente.
 
-Atente-se ao roteiro dos desafios, aos critérios de avaliação e a entrega diferenciada de alguns desafios. Garanta que os avaliadores da comissão organizadora da Hackathon SMARTNESS tenham acesso a todos os arquivos da sua submissão. As equipes devem se assegurar de fornecer todos os demais conjuntos de dados que utilizaram. Não deve ser feito o acesso de arquivos do Google Drive do usuário atual, tal como:
-
-```python
-# ❌ NÃO FAÇA ISSO!
-# > montar o Google Drive do usuário atual
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-Isso é problemático porque depende de arquivos armazenados no Drive do usuário atual que está executando o Colab, e não há garantia de que os arquivos estejam presentes. Em vez disso, dê preferência para baixar os dados necessários em tempo de execução, como as seguintes alternativas:
+Atente-se ao roteiro dos desafios, aos critérios de avaliação e a entrega diferenciada de alguns desafios. Garanta que os avaliadores da comissão organizadora da Hackathon SMARTNESS tenham acesso a todos os arquivos da sua submissão. As equipes devem se assegurar de fornecer todos os demais conjuntos de dados que utilizaram. Dê preferência para baixar os dados necessários tal como as seguintes alternativas:
 
 ```python
 # ✅ Recomendável
