@@ -1,0 +1,9 @@
+name: hackathon5G-scripts
+channels:
+  - conda-forge
+dependencies:
+  # general
+  - python=3.11
+  # specific
+  - pyshark=0.6
+  - pandas=2.0.1

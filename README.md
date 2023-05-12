@@ -19,7 +19,7 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
 - Programação em _Python_
 - _Jupyter Notebook_
 
-# 1º Passo: Utilizar este repositório
+# 1º Passo: Preparação do ambiente de execução
 
 > ⚠️ Esse projeto não possui suporte oficial ao Google Colab
 
@@ -29,7 +29,7 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
 
   [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main?labpath=/)
 
-- **Localmente (em Linux)**
+- **Localmente (testado em Linux e Windows)**
 
   Esse repositório pode ser executado localmente utilizando o ambiente [Mamba](https://mamba.readthedocs.io/en/latest/installation.html) ou [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html), e baixando os conjuntos de dados adicionais.
 
@@ -60,11 +60,6 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
   4. Inicie o Jupyter Lab. Se uma janela do navegador não for aberta com o Jupyter Lab, basta clicar em um dos links de acesso disponíveis no terminal
       ```
       jupyter lab
-      ```
-
-  5. Baixe os conjuntos de dados adicionais (PCAPs do `youtube-qoe`), utilize o seguinte comando
-      ```
-      wget --content-disposition --directory-prefix datasets/youtube-qoe-pcap "https://docs.google.com/uc?export=download&confirm=t&id=1vDJ92Y06Grnnxo6l31vBX7A0dNKGXS62"
       ```
 
 # 2º passo: Datasets

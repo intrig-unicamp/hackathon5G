@@ -6,14 +6,13 @@ Para a Hackathon, foi feita a coleta de dados de utilização da rede 5G no Bras
 Abaixo, enumeramos os dois conjuntos de dados produzidos e um auxiliar. Cada conjunto de dados possui um Jupyter Notebook demonstrando uma exploração de dados inicial para os participantes conhecerem a estrutura dos dados.
 
 # 🎬 Monitoramento do tráfego
-O YouTube tem integrado nos seus diversos clientes (Web, Web Mobile, IFrame, e aplicativos iOS e Android) um instrumento de coleta de métricas de experiência do usuário. Analisamos o código do YouTube Web e identificamos as métricas monitoradas (as quais são iguais nos demais clientes). Os [dados iniciais](./youtube-qoe-har) desse experimento foram coletados pelo Chrome DevTools no formato HAR apenas com o intuito de compreender o formato dos dados.
+O YouTube tem integrado nos seus diversos clientes (Web, Web Mobile, IFrame, e aplicativos iOS e Android) um instrumento de coleta de métricas de experiência do usuário. Para identificar as métricas monitoradas (as quais são iguais nos demais clientes), analisamos o código do YouTube Web e as coletas de requisições em HAR pelo Chrome DevTools.
 
 Para gerar os dados de tráfego no _Samsung S21 5G_, reproduzimos uma playlist com vídeos de alta resolução no YouTube Web Mobile, e a interceptação das métricas de tráfego foi feita pelo [`PCAPdroid`](https://github.com/emanuele-f/PCAPdroid) e o plugin [`PCAPdroid-mitm`](https://github.com/emanuele-f/PCAPdroid-mitm) para descriptografar os pacotes TLS.
 
 > 🛠️ Futuramente, o experimento vai utilizar o aplicativo do YouTube para representar uma situação mais próxima da realidade dos clientes móveis. Por enquanto, isso ainda não foi feito porque o aplicativo do YouTube utiliza o protocolo QUIC, que não é suportado pela versão atual do plugin, mas será suportado na [próxima versão](https://github.com/mitmproxy/mitmproxy/blob/main/CHANGELOG.md#unreleased-mitmproxy-next).
 
-- [Dados `youtube-qoe-pcap`](./youtube-qoe-pcap) (coletado pelo PCAPdroid)
-- [Dados `youtube-qoe-har`](./youtube-qoe-har) (coletado pelo Chrome DevTools)
+- [Dados `youtube-qoe`](./youtube-qoe) (coletas do PCAPdroid)
 - [Exploração de dados / Jupyter Notebook](./youtube-qoe.ipynb)
 
 <details>
@@ -59,6 +58,15 @@ editcap --inject-secrets tls,${filename}.txt ${filename}.pcap ${filename}.pcapng
 Alternativamente, podemos informar os diferentes nomes individualmente:
 ```bash
 editcap --inject-secrets tls,sslkeylogfile_abc.txt captura_abc.pcap captura_e_sslkeys_abc.pcapng
+```
+
+Ao obter os arquivos `.pcapng`, fazemos o pré-processamento para um formato mais fácil de utilizar. Para isso, executamos os [_scripts_](../scripts/) abaixo:
+```bash
+# transforma arquivos .pcapng para .json
+./scripts/extract_youtube_qoe_urls.py -g '*.pcapng'
+
+# transforma arquivos .json para Dataframes pandas no formato .pickle
+./scripts/youtube_qoe_urls_preprocessing.py -g '*.json'
 ```
 
 </details>
