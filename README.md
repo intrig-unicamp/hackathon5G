@@ -1,7 +1,7 @@
 # HACKATHON SMARTNESS / 5G DATASET CHALLENGE
 > _Desenvolvendo soluções e insights usando aprendizado de máquina nos dados de redes 5G no Brasil_
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main?labpath=/)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main)
 [![nbviewer](https://raw.githubusercontent.com/jupyter/design/main/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/intrig-unicamp/hackathon5G/tree/main/)
 
 O avanço do 5G tem sido uma das transformações mais significativas no mundo da tecnologia nos últimos anos, e o Brasil não está ficando para trás nessa corrida. Com uma latência e velocidade de transmissão de dados sem precedentes, o 5G promete revolucionar a maneira como nos conectamos e nos comunicamos uns com os outros, além de possibilitar infinitas novas oportunidades para a inovação e empreendedorismo em diversas áreas como a saúde, a agricultura, a indústria e muito mais.
@@ -27,7 +27,7 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
 
   É possível utilizar esse repositório de forma online, sem configurações adicionais. Basta clicar na _badge_ do Binder que o repositório inteiro será carregado
 
-  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main?labpath=/)
+  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main)
 
 - **Localmente (testado em Linux e Windows)**
 
