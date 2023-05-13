@@ -27,19 +27,20 @@ def trans_comma_sep_at(transformer):
         # each entry is in the form at:metric
         value = [ e.split(':') for e in value.split(',') ]
         # each metric is transformed based on a custom function
-        value = [ { 'at': float(at), **transformer(*v) } for at, *v in value ]
+        value = [ { '.at': float(at), **transformer(*v) } for at, *v in value ]
         return value
     return inner
 
+# afs, vfs, vis, conn
 column_transformers = {
-    'vps':  trans_comma_sep_at(lambda a: { 'value': player_state_enum_map.get(a, a) }),
-    'cmt':  trans_comma_sep_at(lambda a: { 'value': float(a) }),
-    'bh':   trans_comma_sep_at(lambda a: { 'value': float(a) }),
-    'bwe':  trans_comma_sep_at(lambda a: { 'value':   int(a) }),
-    'df':   trans_comma_sep_at(lambda a: { 'value':   int(a) }),
-    'bwm':  trans_comma_sep_at(lambda a, b: { 'downloaded_bytes': int(a), 'seconds_to_download': float(b) }),
-    'bat':  trans_comma_sep_at(lambda a, b: { 'percentage': float(a) * 100, 'is_charging': b == '1' }),
-    'view': trans_comma_sep_at(lambda   *a: { 'width': int(a[0]), 'height': int(a[1]) }), # sometimes has an unknown third value
+    'vps':  trans_comma_sep_at(lambda a: { '': player_state_enum_map.get(a, a) }),
+    'cmt':  trans_comma_sep_at(lambda a: { '': float(a) }),
+    'bh':   trans_comma_sep_at(lambda a: { '': float(a) }),
+    'bwe':  trans_comma_sep_at(lambda a: { '':   int(a) }),
+    'df':   trans_comma_sep_at(lambda a: { '':   int(a) }),
+    'bwm':  trans_comma_sep_at(lambda a, b: { '.downloaded_bytes': int(a), '.seconds_to_download': float(b) }),
+    'bat':  trans_comma_sep_at(lambda a, b: { '.percentage': float(a) * 100, '.is_charging': b == '1' }),
+    'view': trans_comma_sep_at(lambda   *a: { '.width': int(a[0]), '.height': int(a[1]) }), # sometimes has an unknown third value
 }
 
 array_columns = list(column_transformers.keys())
@@ -54,7 +55,7 @@ def explode_columns_and_match_at(df, column_names):
         exploded = df.explode(c)[['cpn', 'seq', c]]
 
         other_columns = exploded.drop(columns=[c]).reset_index(drop=True)
-        c_columns = pd.json_normalize(exploded[c]).add_prefix(f'{c}.').rename(columns={f'{c}.at': 'at'})
+        c_columns = pd.json_normalize(exploded[c]).add_prefix(f'{c}').rename(columns={f'{c}.at': 'at'})
         other_columns[list(c_columns)] = c_columns
 
         out = pd.merge(out, other_columns.dropna(), on=['cpn', 'seq', 'at'], how='outer')

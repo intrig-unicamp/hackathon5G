@@ -7,3 +7,4 @@ dependencies:
   # specific
   - pyshark=0.6
   - pandas=2.0.1
+  - nest-asyncio=1.5.6
