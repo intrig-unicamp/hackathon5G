@@ -29,6 +29,10 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
 
   [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main)
 
+  Devido ao limite de inatividade desse método de execução, recomenda-se a sua utilização apenas em última instância.
+
+  > ⚠️ Atenção para o limite de inatividade de 5 minutos. Ao ultrapassar esse tempo, o ambiente é desativado e removido. As equipes devem se assegurar de salvar constantemente os Notebooks produzidos clicando no ícone <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/web-app-development/cloud-download-icon.png" height="15" />, e, posteriormente restaurar o Notebook em ícone <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/web-app-development/cloud-upload-icon.png" height="15" />.
+
 - **Localmente (testado em Linux e Windows)**
 
   Esse repositório pode ser executado localmente utilizando o ambiente [Mamba](https://mamba.readthedocs.io/en/latest/installation.html) ou [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html), e baixando os conjuntos de dados adicionais.
