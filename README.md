@@ -1,7 +1,6 @@
 # HACKATHON SMARTNESS / 5G DATASET CHALLENGE
 > _Desenvolvendo soluções e insights usando aprendizado de máquina nos dados de redes 5G no Brasil_
 
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main)
 [![nbviewer](https://raw.githubusercontent.com/jupyter/design/main/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/intrig-unicamp/hackathon5G/tree/main/)
 
 O avanço do 5G é uma das transformações mais significativas no mundo da tecnologia nos últimos anos, e o Brasil não está ficando para trás nessa corrida. Com uma latência e velocidade de transmissão de dados sem precedentes, o 5G promete revolucionar a conectividade e comunicação humana, além de possibilitar infinitas novas oportunidades para a inovação e empreendedorismo em diversas áreas como a saúde, a agricultura, a indústria e muito mais.
@@ -22,16 +21,6 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
 # 1º Passo: Preparação do ambiente de execução
 
 > ⚠️ Esse projeto não possui suporte oficial ao Google Colab
-
-- **Binder**
-
-  É possível utilizar esse repositório de forma online, sem configurações adicionais. Basta clicar na _badge_ do Binder que o repositório inteiro será carregado
-
-  [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intrig-unicamp/hackathon5G/main)
-
-  Devido ao limite de inatividade desse método de execução, recomenda-se a sua utilização apenas em última instância.
-
-  > ⚠️ Atenção para o limite de inatividade de 5 minutos. Ao ultrapassar esse tempo, o ambiente é desativado e removido. As equipes devem se assegurar de salvar constantemente os Notebooks produzidos clicando no ícone <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/web-app-development/cloud-download-icon.png" height="15" />, e, posteriormente restaurar o Notebook em ícone <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/web-app-development/cloud-upload-icon.png" height="15" />.
 
 - **Localmente (testado em Linux e Windows)**
 
