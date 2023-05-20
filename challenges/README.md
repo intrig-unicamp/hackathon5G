@@ -14,7 +14,7 @@ Em vista disso, a Hackathon SMARTNESS apresenta os seguintes desafios que podem 
   \
   🔍📊
 
-  **A ferramenta**: [PathsViewer](https://github.com/intrig-unicamp/paths-viewer) é uma interface para visualização de dados espaço-temporais em tempo real ou pós-eventos. Essa ferramenta busca suprir a demanda por ferramentas de visualização de trajetórias de objetos, em vista do grande interesse em pesquisas nesse tipo de dado.
+  **A ferramenta**: [PathsViewer](https://github.com/intrig-unicamp/hackathon5G) é uma interface para visualização de dados espaço-temporais em tempo real ou pós-eventos. Essa ferramenta busca suprir a demanda por ferramentas de visualização de trajetórias de objetos, em vista do grande interesse em pesquisas nesse tipo de dado.
 
   É possível utilizar conjuntos de dados variados, com estruturas diversas, tais como _traces_ de 5G georreferenciados e trajetórias de veículos.
 

@@ -20,9 +20,15 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
 
 # 1º Passo: Preparação do ambiente de execução
 
-> ⚠️ Esse projeto não possui suporte oficial ao Google Colab
+- **Google Colab**
 
-- **Localmente (testado em Linux e Windows)**
+  É possível utilizar esse repositório de forma online, sem configurações adicionais. Basta clicar na _badge_ do Google Colab nos Notebooks que desejar executar.
+
+  Faça uma cópia do Notebook antes de realizar edições (tal como necessário para o template de submissão).
+
+  Atente-se para executar a célula indicando `configuração do ambiente Google Colab` antes de qualquer outra para que o ambiente seja configurado de forma adequada.
+
+- **Localmente**
 
   Esse repositório pode ser executado localmente utilizando o ambiente [Mamba](https://mamba.readthedocs.io/en/latest/installation.html) ou [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html), e baixando os conjuntos de dados adicionais.
 
