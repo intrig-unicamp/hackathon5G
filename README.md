@@ -24,9 +24,9 @@ Além disso, é desejável que os participantes tenham conhecimentos nos seguint
 
   É possível utilizar esse repositório de forma online, sem configurações adicionais. Basta clicar na _badge_ do Google Colab nos Notebooks que desejar executar.
 
-  Faça uma cópia do Notebook antes de realizar edições (tal como necessário para o template de submissão).
+  Faça uma cópia do Notebook para realizar edições no conteúdo.
 
-  Atente-se para executar a célula indicando `configuração do ambiente Google Colab` antes de qualquer outra para que o ambiente seja configurado de forma adequada.
+  Atente-se para executar a célula que indica `configuração do ambiente Google Colab` antes de qualquer outra para que o ambiente seja configurado de forma adequada.
 
 - **Localmente**
 
@@ -68,7 +68,7 @@ Consulte [aqui](datasets) a pasta com as bases de dados disponibilizadas e a sua
 Consulte [aqui](challenges) a pasta com os desafios propostos. O [README](challenges/README.md) dessa pasta fornece as instruções necessárias sobre cada desafio. Também são fornecidos Notebooks auxiliares para as equipes iniciarem mais rapidamente o desenvolvimento dos desafios.
 
 # 4º passo: Entrega
-> **[Google Forms](https://forms.gle/mZd3qTaYuCifXgLW7) para submissão das soluções**
+> **[Google Forms](https://forms.gle/9Gnv8NFdCVPkLFQ99) para submissão das soluções**
 
 As equipes devem submeter os arquivos do Jupyter Notebook produzidos em cada solução, que devem conter um storytelling dos dados cobrindo a descrição do que foi realizado pela equipe, os insights obtidos, o pré-processamento, os modelos de Aprendizado de Máquina desenvolvidos, a avaliação de desempenho dos modelos, a escolha do modelo de Aprendizado de Máquina, entre outros tópicos que as equipes julguem pertinente.
 
